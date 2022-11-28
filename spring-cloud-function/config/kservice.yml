@@ -7,7 +7,7 @@ spec:
     spec:
       containers:
         - name: parser-service
-          image:
+          image: dragomiralin/serverless:latest
           ports:
             - containerPort: 8080
           livenessProbe:
