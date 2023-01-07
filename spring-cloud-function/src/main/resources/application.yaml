@@ -1,0 +1,6 @@
+spring:
+  cloud:
+    function:
+      stream:
+        processor:
+          name: hello
