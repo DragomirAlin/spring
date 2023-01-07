@@ -15,9 +15,7 @@ public class ServerlessApplication {
 
     @Bean
     public Function<String, String> hello() {
-        return (in) -> {
-            return "Hello: " + in + ", Source: ";
-        };
+        return (in) -> "Hello: " + in + ", Source: ";
     }
 
     @Bean
