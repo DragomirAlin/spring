@@ -1,0 +1,5 @@
+spring:
+  data:
+    mongodb:
+      database: warehouse
+      uri: mongodb://localhost:27017

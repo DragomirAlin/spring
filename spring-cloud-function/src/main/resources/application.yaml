@@ -3,4 +3,4 @@ spring:
     function:
       stream:
         processor:
-          name: hello
+          name: ${FUNCTION_NAME:hello}

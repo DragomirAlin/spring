@@ -14,17 +14,17 @@ public class ServerlessApplication {
     }
 
     @Bean
-    public Function<String, String> hello() {
-        return (in) -> "Hello: " + in + ", Source: ";
+    public Function<String, String> lowercase() {
+        return String::toLowerCase;
     }
 
     @Bean
     public Function<String, String> uppercase() {
-        return value -> value.toUpperCase();
+        return String::toUpperCase;
     }
 
     @Bean
-    public Function<String, String> addsample() {
+    public Function<String, String> hello() {
         return value -> "Hello " + value;
     }
 

@@ -4,9 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
 @Builder
+@Document
 @RequiredArgsConstructor
 @AllArgsConstructor
 public class Warehouse {
