@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: e-commerce
+  datasource:
+    url: jdbc:postgresql://localhost:5432/batch
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: postgres
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  batch:
+    jdbc:
+      initialize-schema: always
+      platform: postgres

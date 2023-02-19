@@ -12,7 +12,7 @@ public class Sender {
 
     @Scheduled(fixedDelay = 1000)
     public void send() {
-        rabbitTemplate.convertAndSend("warehouse.direct", "directRoutingKey", "Supplier has sent a new product");
+        System.out.println("job called");
     }
 
 

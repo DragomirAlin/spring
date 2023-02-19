@@ -73,6 +73,11 @@ public class RabbitMqConfiguration {
     }
 
     @Bean
+    Binding bindingRo(Queue warehouseA, TopicExchange exchange) {
+        return BindingBuilder.bind(warehouseA).to(exchange).with("warehouse.eu.ro");
+    }
+
+    @Bean
     Binding bindingB(Queue warehouseB, TopicExchange exchange) {
         return BindingBuilder.bind(warehouseB).to(exchange).with("warehouse.us.*");
     }
