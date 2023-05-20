@@ -1,0 +1,7 @@
+resilience4j:
+  ratelimiter:
+    instances:
+      votes:
+        limitForPeriod: 2
+        limitRefreshPeriod: 10s
+        timeoutDuration: 2s
