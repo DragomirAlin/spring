@@ -1,7 +1,7 @@
-package ro.dragomiralin.ratelimiting.token.repository;
+package ro.dragomiralin.ratelimiting.repository;
 
 import org.springframework.stereotype.Component;
-import ro.dragomiralin.ratelimiting.token.domain.Vote;
+import ro.dragomiralin.ratelimiting.domain.Vote;
 
 import java.util.ArrayList;
 import java.util.List;

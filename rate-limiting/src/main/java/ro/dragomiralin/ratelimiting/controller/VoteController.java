@@ -1,4 +1,4 @@
-package ro.dragomiralin.ratelimiting.token.controller;
+package ro.dragomiralin.ratelimiting.controller;
 
 import io.github.resilience4j.ratelimiter.RequestNotPermitted;
 import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
@@ -7,8 +7,8 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import ro.dragomiralin.ratelimiting.token.domain.Vote;
-import ro.dragomiralin.ratelimiting.token.service.VoteService;
+import ro.dragomiralin.ratelimiting.domain.Vote;
+import ro.dragomiralin.ratelimiting.service.VoteService;
 
 import java.util.List;
 
@@ -19,6 +19,7 @@ public class VoteController {
     private final VoteService voteService;
 
     @PostMapping
+    @RateLimiter(name = "votes", fallbackMethod = "getVotesFallback")
     public void sendVote(@RequestBody Vote vote) {
         voteService.addVote(vote);
     }
