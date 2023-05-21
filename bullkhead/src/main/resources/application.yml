@@ -1,0 +1,7 @@
+resilience4j:
+  bulkhead:
+    instances:
+      paymentBulkheadApi:
+        maxConcurrentCalls: 2
+        maxWaitDuration: 2s
+        writableStackTraceEnabled: true
