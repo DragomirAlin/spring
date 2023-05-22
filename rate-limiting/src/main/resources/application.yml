@@ -2,6 +2,6 @@ resilience4j:
   ratelimiter:
     instances:
       votes:
-        limitForPeriod: 2
+        limitForPeriod: 10
         limitRefreshPeriod: 10s
         timeoutDuration: 2s

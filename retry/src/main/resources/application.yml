@@ -1,0 +1,9 @@
+server:
+  port: 8081
+
+resilience4j:
+  retry:
+    instances:
+      voter:
+        max-attempts: 10
+        wait-duration: 1s

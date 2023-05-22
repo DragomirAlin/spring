@@ -20,8 +20,9 @@ public class VoteController {
 
     @PostMapping
     @RateLimiter(name = "votes", fallbackMethod = "getVotesFallback")
-    public void sendVote(@RequestBody Vote vote) {
+    public ResponseEntity sendVote(@RequestBody Vote vote) {
         voteService.addVote(vote);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @GetMapping
